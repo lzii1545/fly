@@ -5,10 +5,19 @@ import { ServerToClientEvents, ClientToServerEvents, InterServerEvents, SocketDa
 import { Server } from "socket.io";
 
 // Socket配置
-const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>();
+const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>({
+    cors: {
+        origin: "*"
+    }
+});
 
 io.on("connection", (socket) => {
+    console.log(socket.id);
     socket.emit("basicEmit", 0, 'all', Buffer.from('Welcome to Fly!'));
+    socket.on("basicInfo", (type, user, data) => {
+        // ...
+        console.log(type)
+    });
 });
 
 io.listen(config.SOCKET_PORT);

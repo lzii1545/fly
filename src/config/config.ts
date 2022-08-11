@@ -10,7 +10,7 @@ export const config = {
     // 日志文件位置
     LOG_SAVE_PATH: resolve(__dirname, '../log/'),
     // Socket端口
-    SOCKET_PORT: 3000,
+    SOCKET_PORT: 3001,
     // MySQL连接配置
     MYSQL: {
         host: 'localhost',

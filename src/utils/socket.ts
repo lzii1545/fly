@@ -10,6 +10,7 @@ export interface ServerToClientEvents {
 
 export interface ClientToServerEvents {
     handshake: () => void;
+    basicInfo: (type: number, user: string, data: Buffer) => void;
 }
 
 export interface InterServerEvents {
