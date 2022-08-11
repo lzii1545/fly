@@ -12,7 +12,7 @@ const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEve
 });
 
 io.on("connection", (socket) => {
-    console.log(socket.id);
+    
     socket.emit("basicEmit", 0, 'all', Buffer.from('Welcome to Fly!'));
     socket.on("basicInfo", (type, user, data) => {
         // ...
