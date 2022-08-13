@@ -18,5 +18,9 @@ export const config = {
         password: '123456',
         database: 'fly_dev',
         port: 3306,
-    }
+    },
+    // 卡密长度配置(不包括开头)
+    KEY_LEN: 10,
+    // 卡密默认开头
+    KEY_START_BY: "FLY-"
 }
