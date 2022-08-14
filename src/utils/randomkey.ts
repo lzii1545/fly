@@ -30,5 +30,6 @@ export const R_KEY = {
             KeyList.push(this.KeyRandom());
         }
         return KeyList
-    }
+    },
+    
 } 
