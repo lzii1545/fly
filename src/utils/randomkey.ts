@@ -2,7 +2,7 @@
  * 兑换卡密生成
  * Author：Yui
  * Create time：2022年8月13日
- * Modified on：2022年8月13日
+ * Modified on：2022年8月14日
  */
 import { config } from "../config/config";
 import { exec, sql } from 'mysqls';
