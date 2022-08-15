@@ -18,7 +18,7 @@ io.on("connection", (socket) => {
     socket.emit("basicEmit", 0, 'all', Buffer.from('Welcome to Fly!'));
     socket.on("basicInfo", (type, user, data) => {
         // ...
-        console.log(type)
+        
     });
 });
 
