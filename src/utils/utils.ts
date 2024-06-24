@@ -9,12 +9,12 @@ import { accessSync, constants, mkdirSync, appendFileSync } from 'fs';
 
 export const UTILS = {
     /**
-     *  获取当前道历 从游戏开始时间计算，每15分钟为1年     *  
+     *  获取当前道历 从游戏开始时间计算，每240分钟为1年     *  
      */
     GetDaoTime: function (): number {
         let newTime = new Date().getTime();
         let startTime = new Date(config.GAME_START_TIME).getTime();
-        let DaoTime = Math.floor((newTime - startTime) / 1000 / 60 / 15);
+        let DaoTime = Math.floor((newTime - startTime) / 1000 / 240);
         return DaoTime
     },
     /**
